@@ -24,9 +24,25 @@
         </navigation-case>
         
     </navigation-rule>
+    
+    
+     <managed-bean>
+        <managed-bean-name>DuyuruBean</managed-bean-name>
+        <managed-bean-class>com.beans.DuyuruBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    
+    <managed-bean>
+        <managed-bean-name>duyuruListeleme</managed-bean-name>
+        <managed-bean-class>com.beans.DuyuruListeleme</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
     <managed-bean>
         <managed-bean-name>newJSFManagedBean</managed-bean-name>
         <managed-bean-class>com.beans.NewJSFManagedBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    
 </faces-config>

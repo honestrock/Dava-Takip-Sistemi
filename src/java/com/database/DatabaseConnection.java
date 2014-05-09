@@ -22,7 +22,7 @@ public class DatabaseConnection {
     try {
             //URL myUrl = getClass().getResource(".class");
             Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/DTS", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/UES", "root", "");
 
 
         } catch (Exception sqlException) {

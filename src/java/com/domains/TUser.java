@@ -16,43 +16,53 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author apple
  */
-//@Entity
-//@Table(name = "t_user")
-//@XmlRootElement
-//@NamedQueries({
-//    @NamedQuery(name = "TUser.findAll", query = "SELECT t FROM TUser t"),
-//    @NamedQuery(name = "TUser.findByIdUser", query = "SELECT t FROM TUser t WHERE t.idUser = :idUser"),
-//    @NamedQuery(name = "TUser.findByNameUser", query = "SELECT t FROM TUser t WHERE t.nameUser = :nameUser"),
-//    @NamedQuery(name = "TUser.findBySurnameUser", query = "SELECT t FROM TUser t WHERE t.surnameUser = :surnameUser"),
-//    @NamedQuery(name = "TUser.findByTypeUser", query = "SELECT t FROM TUser t WHERE t.typeUser = :typeUser"),
-//    @NamedQuery(name = "TUser.findByMailUser", query = "SELECT t FROM TUser t WHERE t.mailUser = :mailUser"),
-//    @NamedQuery(name = "TUser.findByPasswordUser", query = "SELECT t FROM TUser t WHERE t.passwordUser = :passwordUser")})
-public class TUser  {
+@Entity
+@Table(name = "t_user")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "TUser.findAll", query = "SELECT t FROM TUser t"),
+    @NamedQuery(name = "TUser.findByIdUser", query = "SELECT t FROM TUser t WHERE t.idUser = :idUser"),
+    @NamedQuery(name = "TUser.findByNameUser", query = "SELECT t FROM TUser t WHERE t.nameUser = :nameUser"),
+    @NamedQuery(name = "TUser.findBySurnameUser", query = "SELECT t FROM TUser t WHERE t.surnameUser = :surnameUser"),
+    @NamedQuery(name = "TUser.findByTypeUser", query = "SELECT t FROM TUser t WHERE t.typeUser = :typeUser"),
+    @NamedQuery(name = "TUser.findByMailUser", query = "SELECT t FROM TUser t WHERE t.mailUser = :mailUser"),
+    @NamedQuery(name = "TUser.findByPasswordUser", query = "SELECT t FROM TUser t WHERE t.passwordUser = :passwordUser")})
+public class TUser implements Serializable {
     private static final long serialVersionUID = 1L;
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Basic(optional = false)
-//    @Column(name = "id_user")
-    private Integer idUser=0;
-//    @Basic(optional = false)
-//    @Column(name = "name_user")
-    private String nameUser="";
-//    @Basic(optional = false)
-//    @Column(name = "surname_user")
-    private String surnameUser="";
-//    @Basic(optional = false)
-//    @Column(name = "type_user")
-    private int typeUser=0;
-//    @Basic(optional = false)
-//    @Column(name = "mail_user")
-    private String mailUser="";
-//    @Column(name = "password_user")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_user")
+    private Integer idUser;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "name_user")
+    private String nameUser;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "surname_user")
+    private String surnameUser;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "type_user")
+    private int typeUser;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 255)
+    @Column(name = "mail_user")
+    private String mailUser;
+    @Size(max = 45)
+    @Column(name = "password_user")
     private String passwordUser;
 
     public TUser() {
@@ -62,13 +72,13 @@ public class TUser  {
         this.idUser = idUser;
     }
 
-//    public TUser(Integer idUser, String nameUser, String surnameUser, int typeUser, String mailUser) {
-//        this.idUser = idUser;
-//        this.nameUser = nameUser;
-//        this.surnameUser = surnameUser;
-//        this.typeUser = typeUser;
-//        this.mailUser = mailUser;
-//    }
+    public TUser(Integer idUser, String nameUser, String surnameUser, int typeUser, String mailUser) {
+        this.idUser = idUser;
+        this.nameUser = nameUser;
+        this.surnameUser = surnameUser;
+        this.typeUser = typeUser;
+        this.mailUser = mailUser;
+    }
 
     public Integer getIdUser() {
         return idUser;

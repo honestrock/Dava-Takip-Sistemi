@@ -10,7 +10,8 @@
         Hello from Facelets 
                     <h:form>
                         <h:inputText value="#{newJSFManagedBean.userinformation.mailUser}"></h:inputText>
-                        <h:inputText value="bb"></h:inputText>     
+                        <h:inputText value="#{newJSFManagedBean.userinformation.passwordUser}"></h:inputText>
+                        <h:commandButton  action="#{newJSFManagedBean.login()}" value="Giriş Yap"></h:commandButton>
                     </h:form>
     </h:body>
 </html>
