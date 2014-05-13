@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/src/java/com/database/DatabaseConnection.java</file>
-            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/src/java/com/beans/NewJSFManagedBean.java</file>
-            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/web/login.xhtml</file>
-            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/src/conf/persistence.xml</file>
+            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/web/WEB-INF/faces-config.xml</file>
+            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/web/advert.xhtml</file>
+            <file>file:/Users/apple/Desktop/Dava-Takip-Sistemi/web/advertList.xhtml</file>
         </group>
     </open-files>
 </project-private>

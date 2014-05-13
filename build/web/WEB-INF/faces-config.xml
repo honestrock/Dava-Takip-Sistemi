@@ -32,6 +32,12 @@
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
     
+      <managed-bean>
+        <managed-bean-name>DavaBean</managed-bean-name>
+        <managed-bean-class>com.beans.DavaBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
     
     <managed-bean>
         <managed-bean-name>duyuruListeleme</managed-bean-name>
